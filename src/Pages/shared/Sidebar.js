@@ -33,12 +33,10 @@ class Sidebar extends Component {
     });
 
     const dropdownPaths = [
-      { path: "/apps", state: "appsMenuOpen" },
+      { path: "/apps", state: "appsMe   nuOpen" },
       { path: "/cms", state: "basicUiMenuOpen" },
       { path: "/form-elements", state: "formElementsMenuOpen" },
       { path: "/tables", state: "tablesMenuOpen" },
-      { path: "/icons", state: "iconsMenuOpen" },
-      { path: "/charts", state: "chartsMenuOpen" },
       { path: "/user-pages", state: "userPagesMenuOpen" },
       { path: "/error-pages", state: "errorPagesMenuOpen" },
     ];
@@ -46,6 +44,7 @@ class Sidebar extends Component {
     dropdownPaths.forEach((obj) => {
       if (this.isPathActive(obj.path)) {
         this.setState({ [obj.state]: true });
+        console.log(this.state);
       }
     });
   }
@@ -189,7 +188,7 @@ class Sidebar extends Component {
                       }
                       to="/cms/home"
                     >
-                      Home 
+                      Home
                     </Link>
                   </li>
                   <li className="nav-item">
