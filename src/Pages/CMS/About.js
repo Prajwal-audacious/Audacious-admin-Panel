@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Banner from "../../Components/Aboutus/Banner";
 import Technology from "../../Components/Aboutus/Technology";
 import Chooseus from "../../Components/Aboutus/Chooseus";
@@ -8,54 +8,88 @@ import OurSection from "../../Components/Aboutus/OurSection";
 import TeamWork from "../../Components/Aboutus/TeamWork";
 
 const About = () => {
+  const [ckeditorData, setCkeditorData] = useState({});
+  const [inputData, setInputData] = useState({});
+  const [imageData, setImageData] = useState({});
+
+  const handleImage = ({ target: { name, files } }) => {
+    setImageData({ ...imageData, [name]: files[0] });
+  };
+
+  const handleChange = ({ target: { name, value } }) => {
+    setInputData({ ...inputData, [name]: value });
+  };
+  const handleCkeditorValues = (event, editor, name) => {
+    setCkeditorData({ ...ckeditorData, [name]: editor.getData() });
+  };
+  console.log(ckeditorData);
+  console.log(inputData);
+  console.log(imageData);
+
   return (
     <div className="row">
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <Banner />
+            <Banner handleChange={handleChange} handleImage={handleImage} />
           </div>
         </div>
       </div>
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <Technology />
+            <Technology
+              handleChange={handleChange}
+              handleCkeditorValues={handleCkeditorValues}
+              handleImage={handleImage}
+            />
           </div>
         </div>
       </div>
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <Chooseus />
+            <Chooseus
+              handleChange={handleChange}
+              handleCkeditorValues={handleCkeditorValues}
+              handleImage={handleImage}
+            />
           </div>
         </div>
       </div>
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <TeamMember />
+            <TeamMember handleChange={handleChange} handleImage={handleImage} />
           </div>
         </div>
       </div>
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <WhyChooseUs />
+            <WhyChooseUs
+              handleChange={handleChange}
+              handleCkeditorValues={handleCkeditorValues}
+              handleImage={handleImage}
+            />
           </div>
         </div>
       </div>
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <OurSection />
+            <OurSection
+              handleChange={handleChange}
+              handleCkeditorValues={handleCkeditorValues}
+              handleImage={handleImage}
+            />
           </div>
         </div>
       </div>
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <TeamWork />
+            <TeamWork handleChange={handleChange} handleImage={handleImage} />
           </div>
         </div>
       </div>

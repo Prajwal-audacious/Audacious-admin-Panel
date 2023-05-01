@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form } from "react-bootstrap";
 import Preview from "../Preview";
 
-const Banner = () => {
-  const [image, setImage] = useState(null);
-
-  //   console.log(image);
+const Banner = ({ handleChange, handleImage }) => {
   return (
     <div>
       <Form>
@@ -14,11 +11,10 @@ const Banner = () => {
         <Form.Group>
           <Form.Label>About Us Title</Form.Label>
           <Form.Control
-            //     defaultValue={data.title}
             type="text"
-            name="title"
+            name="aboutUsBannerHeading"
+            onChange={handleChange}
             placeholder="Enter banner title"
-            //     onChange={handleChange}
           />
         </Form.Group>
         <Form.Group>
@@ -26,25 +22,25 @@ const Banner = () => {
           <div className="custom-file">
             <Form.Control
               type="file"
+              name="aboutUsBannerImg"
               className="form-control visibility-hidden"
               id="customFileLang"
-              onChange={(e) => setImage(e.target.files[0])}
+              onChange={handleImage}
             />
             <label className="custom-file-label" htmlFor="customFileLang">
               Upload image
             </label>
           </div>
           <hr />
-          <div>{image ? <Preview file={image} /> : "No Image"}</div>
+          {/* <div>{image ? <Preview file={image.name} /> : "No Image"}</div> */}
         </Form.Group>
         <Form.Group>
           <Form.Label>Banner Sub Title</Form.Label>
           <Form.Control
-            //     defaultValue={data.title}
             type="text"
-            name="bannertitle"
+            name="aboutUsBannerTitle"
             placeholder="Enter banner title"
-            //     onChange={handleChange}
+            onChange={handleChange}
           />
         </Form.Group>
       </Form>
