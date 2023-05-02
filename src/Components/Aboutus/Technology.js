@@ -5,28 +5,8 @@ import Preview from "../Preview";
 import axios from "axios";
 
 const Technology = ({ handleChange, handleCkeditorValues, handleImage }) => {
-  const [b, setB] = useState();
-  const a = {
-    data: "<p>example<h1>data</h1>data</p>",
-  };
+  
 
-  const api = async () => {
-    try {
-      const { data } = await axios.get("http://localhost:8000/api/v1/home", {
-        headers: {
-          Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjYyZmNjYTFmM2EzNDFhODZkZmFjZTgyNyIsImZpcnN0TmFtZSI6IlN1bmlsIiwibGFzdE5hbWUiOiJZYWRhdiIsImVtYWlsIjoic3VuaWwueWFkYXZAYXVkYWNpb3VzdGVjaG5vbG9naWVzLmNvbSIsInVzZXJUeXBlIjoic3VwZXJBZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJFdlRlBrdVdseHczRk5lM2liVnJuNHVMQmJRYm94U1pteU5KMm9wV3dqZ2ZGc2hwWHBOVk5tIiwic3RhdHVzIjoiYWN0aXZlIiwiaXNBY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMjItMDgtMTdUMTA6NTk6NDMuNjg4WiIsInVwZGF0ZWRBdCI6IjIwMjItMDgtMTdUMTA6NTk6NDMuNjg4WiIsIl9fdiI6MH0sImlhdCI6MTY4MjQwMTUxMCwiZXhwIjoxNzEzOTM3NTEwfQ.0xsiHMqVGmjWHkipXza_jiHepjnR9v0LlLwWO4fPz_M`,
-        },
-      });
-      console.log(data);
-      setB(data.result.development.developmentDescription);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    api();
-  }, []);
 
   return (
     <div>
@@ -49,7 +29,7 @@ const Technology = ({ handleChange, handleCkeditorValues, handleImage }) => {
           <div>
             <Form.Label>Section Sub Description</Form.Label>
             <CKeditor
-              data={b}
+              // data={b}
               onChange={(event, editor) => {
                 handleCkeditorValues(event, editor, "technologySubDescription");
               }}

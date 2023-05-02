@@ -14,6 +14,7 @@ const Banner = ({ handleChange, handleImage }) => {
             type="text"
             placeholder="Enter Heading"
             name="serviceBannerHeading"
+            onChange={handleChange}
           />
         </Form.Group>
         <hr />
@@ -23,6 +24,8 @@ const Banner = ({ handleChange, handleImage }) => {
             type="text"
             placeholder="Enter Heading"
             name="serviceBannerTitle"
+            onChange={handleChange}
+
           />
         </Form.Group>
         <hr />
@@ -33,11 +36,11 @@ const Banner = ({ handleChange, handleImage }) => {
               <Form.Control
                 type="file"
                 className="form-control visibility-hidden"
-                id="customFileLang"
+                id="servicesBannerImg"
                 name="servicesBannerImg"
-                // onChange={handleImage}
+                onChange={handleImage}
               />
-              <label className="custom-file-label" htmlFor="customFileLang">
+              <label className="custom-file-label" htmlFor="servicesBannerImg">
                 Upload image
               </label>
             </div>

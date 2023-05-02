@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import CKeditor from "../Editor";
 import Preview from "../Preview";
 
-const WebDesign = () => {
+const WebDesign = ({ handleCkeditorValues, handleImage, handleChange }) => {
   return (
     <div>
       <Form>

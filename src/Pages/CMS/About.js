@@ -8,8 +8,8 @@ import OurSection from "../../Components/Aboutus/OurSection";
 import TeamWork from "../../Components/Aboutus/TeamWork";
 
 const About = () => {
-  const [ckeditorData, setCkeditorData] = useState({});
   const [inputData, setInputData] = useState({});
+  const [ckeditorData, setCkeditorData] = useState({});
   const [imageData, setImageData] = useState({});
 
   const handleImage = ({ target: { name, files } }) => {
