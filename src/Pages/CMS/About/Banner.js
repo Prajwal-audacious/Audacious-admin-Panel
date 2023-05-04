@@ -1,6 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import Preview from "../Preview";
+import Preview from '../../../Components/Preview';
+
 
 const Banner = ({ handleChange, handleImage }) => {
   return (

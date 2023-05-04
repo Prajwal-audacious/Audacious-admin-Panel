@@ -1,8 +1,9 @@
 import React from "react";
-import Banner from "../../Components/Home/Banner";
+import Banner from "./Banner";
 
 
-const Home = () => {
+
+const index = () => {
   return (
     <div className="row">
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
@@ -16,4 +17,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default index;

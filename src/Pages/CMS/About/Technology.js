@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import CKeditor from "../Editor";
-import Preview from "../Preview";
-import axios from "axios";
+import CKeditor from "../../../Components/Editor";
+import Preview from '../../../Components/Preview';
+
+
 
 const Technology = ({ handleChange, handleCkeditorValues, handleImage }) => {
   

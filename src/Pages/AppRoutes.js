@@ -5,10 +5,10 @@ import Spinner from "../Pages/shared/Spinner";
 
 const Dashboard = lazy(() => import("./dashboard/Dashboard"));
 // cms pages
-const Home = lazy(() => import("./CMS/Home"));
-const About = lazy(() => import("./CMS/About"));
-const Services = lazy(() => import("./CMS/Services"));
-const Projects = lazy(()=>import("./CMS/Projects"))
+const Home = lazy(() => import("./CMS/Home/index"));
+const About = lazy(() => import("./CMS/About/index"));
+const Services = lazy(() => import("./CMS/Services/index"));
+const Projects = lazy(() => import("./CMS/Projects/index"));
 // form element
 const BasicElements = lazy(() => import("./form-elements/BasicElements"));
 // table
@@ -16,7 +16,7 @@ const BasicTable = lazy(() => import("./tables/BasicTable"));
 // errorpage
 const Error404 = lazy(() => import("./error-pages/Error404"));
 const Error500 = lazy(() => import("./error-pages/Error500"));
-// login/signup 
+// login/signup
 const Login = lazy(() => import("./user-pages/Login"));
 const Register1 = lazy(() => import("./user-pages/Register"));
 

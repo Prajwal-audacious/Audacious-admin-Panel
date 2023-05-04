@@ -1,7 +1,8 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import Preview from "../Preview";
-import CKeditor from "../Editor";
+import CKeditor from "../../../Components/Editor";
+import Preview from '../../../Components/Preview';
+
 
 const Chooseus = ({ handleChange, handleCkeditorValues, handleImage }) => {
   return (

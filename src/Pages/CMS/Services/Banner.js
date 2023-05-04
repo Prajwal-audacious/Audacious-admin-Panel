@@ -1,6 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import Preview from "../Preview";
+import Preview from "../../../Components/Preview";
+import FormInput from "../../../Components/FormInput";
 
 const Banner = ({ handleChange, handleImage }) => {
   return (
@@ -25,7 +26,6 @@ const Banner = ({ handleChange, handleImage }) => {
             placeholder="Enter Heading"
             name="serviceBannerTitle"
             onChange={handleChange}
-
           />
         </Form.Group>
         <hr />
@@ -50,6 +50,17 @@ const Banner = ({ handleChange, handleImage }) => {
         </Form.Group>
       </Form>
     </div>
+    // <div>
+    //   <h2>Banner Section</h2>
+    //   <FormInput
+    //     type={"Heading"}
+    //     Label={"Section Main Heading"}
+    //     onChange={handleChange}
+    //     name={"ServiceMainHeading"}
+    //   />
+    //   <FormInput type={'file'}/>
+    //   <FormInput type={'editor'}/>
+    // </div>
   );
 };
 

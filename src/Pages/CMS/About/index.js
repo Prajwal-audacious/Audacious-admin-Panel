@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Banner from "../../Components/Aboutus/Banner";
-import Technology from "../../Components/Aboutus/Technology";
-import Chooseus from "../../Components/Aboutus/Chooseus";
-import TeamMember from "../../Components/Aboutus/TeamMember";
-import WhyChooseUs from "../../Components/Aboutus/WhyChooseUs";
-import OurSection from "../../Components/Aboutus/OurSection";
-import TeamWork from "../../Components/Aboutus/TeamWork";
+import Banner from "./Banner";
+import Technology from "./Technology";
+import Chooseus from "./Chooseus";
+import TeamMember from "./TeamMember";
+import WhyChooseUs from "./WhyChooseUs";
+import OurSection from "./OurSection";
+import TeamWork from "./TeamWork";
 
 const About = () => {
   const [inputData, setInputData] = useState({});

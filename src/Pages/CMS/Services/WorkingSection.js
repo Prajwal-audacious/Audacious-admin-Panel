@@ -1,6 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import CKeditor from "../Editor";
+import CKeditor from "../../../Components/Editor";
 
 const WorkingSection = () => {
   return (

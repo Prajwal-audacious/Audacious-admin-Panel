@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import Banner from "../../Components/Services/Banner";
-import WorkingSection from "../../Components/Services/WorkingSection";
-import OurCompany from "../../Components/Services/OurCompany";
-import WebDesign from "../../Components/Services/WebDesign";
-import SoftwareDev from "../../Components/Services/SoftwareDev";
-import MobileDev from "../../Components/Services/MobileDev";
-import WebAppDev from "../../Components/Services/WebAppDev";
-import CmsDev from "../../Components/Services/CmsDev";
-import TechTrend from "../../Components/Services/TechTrend";
+import Banner from "./Banner";
+import WorkingSection from "./WorkingSection";
+import OurCompany from "./OurCompany";
+import WebDesign from "./WebDesign";
+import SoftwareDev from "./SoftwareDev";
+import MobileDev from "./MobileDev";
+import WebAppDev from "./WebAppDev";
+import CmsDev from "./CmsDev";
+import TechTrend from "./TechTrend";
 
 const Services = () => {
   const [inputData, setInputData] = useState({});

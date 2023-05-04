@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import CKeditor from "../Editor";
-import Preview from "../Preview";
+import CKeditor from "../../../Components/Editor";
+import Preview from '../../../Components/Preview';
+
 
 const CmsDev = ({ handleCkeditorValues, handleImage, handleChange }) => {
   return (
