@@ -6,6 +6,9 @@ import TeamMember from "./TeamMember";
 import WhyChooseUs from "./WhyChooseUs";
 import OurSection from "./OurSection";
 import TeamWork from "./TeamWork";
+import Card from "../../../Components/Card";
+import CustomForm from "../../../Components/CustomForm";
+import FormInput from "../../../Components/FormInput";
 
 const About = () => {
   const [inputData, setInputData] = useState({});
@@ -26,74 +29,66 @@ const About = () => {
   console.log(inputData);
   console.log(imageData);
 
+  const submitBtn = () => {
+    console.log("djkawn");
+  };
+
   return (
-    <div className="row">
-      <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
-        <div className="card">
-          <div className="card-body">
-            <Banner handleChange={handleChange} handleImage={handleImage} />
-          </div>
-        </div>
+    <CustomForm onSubmit={submitBtn}>
+      <div className="row">
+        <Card>
+          <Banner
+            handleChange={handleChange}
+            handleImage={handleImage}
+            handleCkeditorValues={handleCkeditorValues}
+          />
+        </Card>
+        <Card>
+          <Technology
+            handleChange={handleChange}
+            handleCkeditorValues={handleCkeditorValues}
+            handleImage={handleImage}
+          />
+        </Card>
+
+        <Card>
+          <Chooseus
+            handleChange={handleChange}
+            handleCkeditorValues={handleCkeditorValues}
+            handleImage={handleImage}
+          />
+        </Card>
+        <Card>
+          <TeamMember
+            handleChange={handleChange}
+            handleImage={handleImage}
+            handleCkeditorValues={handleCkeditorValues}
+          />
+        </Card>
+        <Card>
+          <WhyChooseUs
+            handleChange={handleChange}
+            handleCkeditorValues={handleCkeditorValues}
+            handleImage={handleImage}
+          />
+        </Card>
+        <Card>
+          <OurSection
+            handleChange={handleChange}
+            handleCkeditorValues={handleCkeditorValues}
+            handleImage={handleImage}
+          />
+        </Card>
+        <Card>
+          <TeamWork
+            handleChange={handleChange}
+            handleImage={handleImage}
+            handleCkeditorValues={handleCkeditorValues}
+          />
+          <FormInput type="button" />
+        </Card>
       </div>
-      <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
-        <div className="card">
-          <div className="card-body">
-            <Technology
-              handleChange={handleChange}
-              handleCkeditorValues={handleCkeditorValues}
-              handleImage={handleImage}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
-        <div className="card">
-          <div className="card-body">
-            <Chooseus
-              handleChange={handleChange}
-              handleCkeditorValues={handleCkeditorValues}
-              handleImage={handleImage}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
-        <div className="card">
-          <div className="card-body">
-            <TeamMember handleChange={handleChange} handleImage={handleImage} />
-          </div>
-        </div>
-      </div>
-      <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
-        <div className="card">
-          <div className="card-body">
-            <WhyChooseUs
-              handleChange={handleChange}
-              handleCkeditorValues={handleCkeditorValues}
-              handleImage={handleImage}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
-        <div className="card">
-          <div className="card-body">
-            <OurSection
-              handleChange={handleChange}
-              handleCkeditorValues={handleCkeditorValues}
-              handleImage={handleImage}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
-        <div className="card">
-          <div className="card-body">
-            <TeamWork handleChange={handleChange} handleImage={handleImage} />
-          </div>
-        </div>
-      </div>
-    </div>
+    </CustomForm>
   );
 };
 

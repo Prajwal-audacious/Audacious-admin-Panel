@@ -1,188 +1,118 @@
 import React from "react";
-import { Form } from "react-bootstrap";
-import Preview from '../../../Components/Preview';
-
+import FormInput from "../../../Components/FormInput";
 
 const TeamMember = ({ handleChange, handleImage }) => {
   return (
     <div>
-      <Form>
-        <h2>Expert Team Member Section</h2>
+      <h2>Expert Team Member Section</h2>
+      <hr />
+      <FormInput
+        type="heading"
+        label="Section Main Heading"
+        name="aboutUsTeamMemberHeading"
+        onChange={handleChange}
+      />
+      <hr />
+      <div>
+        <h3>Person 1 Details</h3>
         <hr />
-        <Form.Group>
-          <Form.Label>Section Heading</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter Main Haeding"
-            name="aboutUsTeamMemberHeading"
-            onChange={handleChange}
-          />
-        </Form.Group>
+        <FormInput
+          type="file"
+          label="Person 1 Image"
+          name="aboutUsTeamMemberImg1"
+          onChange={handleImage}
+        />
         <hr />
-        <Form.Group>
-          <div>
-            <h3>Person 1 Details</h3>
-            <hr />
-            <Form.Label>Section Image 1</Form.Label>
-            <div className="custom-file">
-              <Form.Control
-                type="file"
-                name="aboutUsTeamMemberImg1"
-                className="form-control visibility-hidden"
-                id="TeamMemberSection1"
-                onChange={handleImage}
-              />
-              <label className="custom-file-label" htmlFor="TeamMemberSection1">
-                Upload image
-              </label>
-              <hr />
-            </div>
-            <hr />
-            {/* <div>{image ? <Preview file={image} /> : "No Image"}</div> */}
-          </div>
-          <hr />
-          <div>
-            <Form.Label>Person 1 Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter name"
-              name="aboutUsTeamMemberPersonName_1"
-              onChange={handleChange}
-            />
-            <hr />
-            <Form.Label>Person 1 Role</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter Role"
-              name="aboutUsTeamMemberPersonRole_1"
-              onChange={handleChange}
-            />
-          </div>
-        </Form.Group>
+        <FormInput
+          type="title"
+          label="Person 1 Name"
+          name="aboutUsTeamMemberPersonName_1"
+          onChange={handleChange}
+        />
         <hr />
-        <Form.Group>
-          <div>
-            <h3>Person 2 Details</h3>
-            <hr />
-            <Form.Label>Section Image 2</Form.Label>
-            <div className="custom-file">
-              <Form.Control
-                type="file"
-                className="form-control visibility-hidden"
-                name="aboutUsTeamMemberImg2"
-                id="TeamMemberSection2"
-                onChange={handleImage}
-              />
-              <label className="custom-file-label" htmlFor="TeamMemberSection2">
-                Upload image
-              </label>
-              <hr />
-            </div>
-            <hr />
-            {/* <div>{image ? <Preview file={image} /> : "No Image"}</div> */}
-            <hr />
-            <div>
-              <Form.Label>Person 2 Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter name"
-                name="aboutUsTeamMemberPersonName_2"
-                onChange={handleChange}
-              />
-              <hr />
-              <Form.Label>Person 2 Role</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter Role"
-                name="aboutUsTeamMemberPersonRole_2"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-        </Form.Group>
+        <FormInput
+          type="title"
+          label="Person 1 Role"
+          name="aboutUsTeamMemberPersonRole_1"
+          onChange={handleChange}
+        />
         <hr />
-        <Form.Group>
-          <div>
-            <h3>Person 3 Details</h3>
-            <hr />
-            <Form.Label>Section Image 3</Form.Label>
-            <div className="custom-file">
-              <Form.Control
-                type="file"
-                name="aboutUsTeamMemberImg3"
-                className="form-control visibility-hidden"
-                id="TeamMemberSection3"
-                onChange={handleImage}
-              />
-              <label className="custom-file-label" htmlFor="TeamMemberSection3">
-                Upload image
-              </label>
-              <hr />
-            </div>
-            <hr />
-            {/* <div>{image ? <Preview file={image} /> : "No Image"}</div> */}
-            <hr />
-            <div>
-              <Form.Label>Person 3 Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter name"
-                name="aboutUsTeamMemberPersonName_3"
-                onChange={handleChange}
-              />
-              <hr />
-              <Form.Label>Person 3 Role</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter Role"
-                name="aboutUsTeamMemberPersonRole_3"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-        </Form.Group>
+      </div>
+      <div>
+        <h3>Person 2 Details</h3>
         <hr />
-        <Form.Group>
-          <div>
-            <h3>Person 4 Details</h3>
-            <hr />
-            <Form.Label>Section Image 4</Form.Label>
-            <div className="custom-file">
-              <Form.Control
-                type="file"
-                className="form-control visibility-hidden"
-                id="TeamMemberSection4"
-                name="aboutUsTeamMemberImg4"
-                onChange={handleImage}
-              />
-              <label className="custom-file-label" htmlFor="TeamMemberSection4">
-                Upload image
-              </label>
-              <hr />
-            </div>
-            <hr />
-            {/* <div>{image ? <Preview file={image} /> : "No Image"}</div> */}
-            <hr />
-            <div>
-              <Form.Label>Person 4 Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter name"
-                name="aboutUsTeamMemberPersonName_4"
-                onChange={handleChange}
-              />
-              <hr />
-              <Form.Label>Person 4 Role</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter Role"
-                name="aboutUsTeamMemberPersonRole_4"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-        </Form.Group>
-      </Form>
+        <FormInput
+          type="file"
+          label="Person 2 Image"
+          name="aboutUsTeamMemberImg2"
+          onChange={handleImage}
+        />
+        <hr />
+        <FormInput
+          type="title"
+          label="Person 2 Name"
+          name="aboutUsTeamMemberPersonName_2"
+          onChange={handleChange}
+        />
+        <hr />
+        <FormInput
+          type="title"
+          label="Person 1 Role"
+          name="aboutUsTeamMemberPersonRole_2"
+          onChange={handleChange}
+        />
+        <hr />
+      </div>
+      <div>
+        <h3>Person 3 Details</h3>
+        <hr />
+        <FormInput
+          type="file"
+          label="Person 3 Image"
+          name="aboutUsTeamMemberImg3"
+          onChange={handleImage}
+        />
+        <hr />
+        <FormInput
+          type="title"
+          label="Person 3 Name"
+          name="aboutUsTeamMemberPersonName_3"
+          onChange={handleChange}
+        />
+        <hr />
+        <FormInput
+          type="title"
+          label="Person 3 Role"
+          name="aboutUsTeamMemberPersonRole_3"
+          onChange={handleChange}
+        />
+        <hr />
+      </div>
+      <div>
+        <h3>Person 4 Details</h3>
+        <hr />
+        <FormInput
+          type="file"
+          label="Person 4 Image"
+          name="aboutUsTeamMemberImg4"
+          onChange={handleImage}
+        />
+        <hr />
+        <FormInput
+          type="title"
+          label="Person 4 Name"
+          name="aboutUsTeamMemberPersonName_4"
+          onChange={handleChange}
+        />
+        <hr />
+        <FormInput
+          type="title"
+          label="Person 4 Role"
+          name="aboutUsTeamMemberPersonRole_4"
+          onChange={handleChange}
+        />
+        <hr />
+      </div>
     </div>
   );
 };
