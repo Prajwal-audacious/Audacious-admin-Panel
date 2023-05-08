@@ -44,7 +44,11 @@ const Services = () => {
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <WorkingSection />
+            <WorkingSection
+              handleImage={handleImage}
+              handleChange={handleChange}
+              handleCkeditorValues={handleCkeditorValues}
+            />
           </div>
         </div>
       </div>
@@ -62,7 +66,11 @@ const Services = () => {
       <div className="col-xl-12 col-sm-6 grid-margin stretch-card">
         <div className="card">
           <div className="card-body">
-            <WebDesign />
+            <WebDesign
+              handleImage={handleImage}
+              handleChange={handleChange}
+              handleCkeditorValues={handleCkeditorValues}
+            />
           </div>
         </div>
       </div>
