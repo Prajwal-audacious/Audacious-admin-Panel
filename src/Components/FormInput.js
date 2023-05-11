@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import CKeditor from "./Editor";
 import Preview from "./Preview";
 
-const FormInput = ({ type, label, name, onChange }) => {
+const FormInput = ({ type, label, name, onChange, data }) => {
   if (type === "heading") {
     return (
       <>
@@ -40,7 +40,7 @@ const FormInput = ({ type, label, name, onChange }) => {
       <>
         <Form.Group>
           <Form.Label>{label}</Form.Label>
-          <CKeditor onChange={onChange} />
+          <CKeditor onChange={onChange} data={data} />
         </Form.Group>
       </>
     );

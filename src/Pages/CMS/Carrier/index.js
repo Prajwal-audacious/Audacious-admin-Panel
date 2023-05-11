@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Card from "../../../Components/Card";
-import Banner from "./Banner";
-import ProjectDetails from "./ProjectDetails";
-import OurProjects from "./OurProjects";
+import DesignAndDev from "./DesignAndDev";
+import Opportunity from "./Opportunity";
+import Reffral from "./Reffral";
+import Explore from "./Explore";
 import CustomForm from "../../../Components/CustomForm";
-import FormInput from "../../../Components/FormInput";
+import Banner from "./Banner";
 
-const Projects = () => {
+const Carrier = () => {
   const [inputData, setInputData] = useState({});
   const [ckeditorData, setCkeditorData] = useState({});
   const [imageData, setImageData] = useState({});
@@ -21,39 +22,38 @@ const Projects = () => {
   const handleCkeditorValues = (event, editor, name) => {
     setCkeditorData({ ...ckeditorData, [name]: editor.getData() });
   };
-  console.log(inputData);
   console.log(ckeditorData);
+  console.log(inputData);
   console.log(imageData);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("submited");
+  const submitBtn = () => {
+    console.log("djkawn");
   };
-
   return (
-    <CustomForm onSubmit={handleSubmit}>
+    <CustomForm onSubmit={submitBtn}>
       <div className="row">
         <Card>
           <Banner handleImage={handleImage} handleChange={handleChange} />
         </Card>
         <Card>
-          <ProjectDetails
+          <DesignAndDev handleImage={handleImage} handleChange={handleChange} />
+        </Card>
+        <Card>
+          <Opportunity
             handleCkeditorValues={handleCkeditorValues}
             handleImage={handleImage}
             handleChange={handleChange}
           />
         </Card>
         <Card>
-          <OurProjects
-            handleCkeditorValues={handleCkeditorValues}
-            handleImage={handleImage}
-            handleChange={handleChange}
-          />
-          <FormInput type="button" />
+          <Reffral handleImage={handleImage} handleChange={handleChange} />
+        </Card>
+        <Card>
+          <Explore handleImage={handleImage} handleChange={handleChange} />
         </Card>
       </div>
     </CustomForm>
   );
 };
 
-export default Projects;
+export default Carrier;

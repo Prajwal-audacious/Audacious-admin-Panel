@@ -35,8 +35,8 @@ class Sidebar extends Component {
     const dropdownPaths = [
       { path: "/apps", state: "appsMe   nuOpen" },
       { path: "/cms", state: "basicUiMenuOpen" },
-      { path: "/form-elements", state: "formElementsMenuOpen" },
-      { path: "/tables", state: "tablesMenuOpen" },
+      // { path: "/form-elements", state: "formElementsMenuOpen" },
+      // { path: "/tables", state: "tablesMenuOpen" },
       { path: "/user-pages", state: "userPagesMenuOpen" },
       { path: "/error-pages", state: "errorPagesMenuOpen" },
     ];
@@ -230,11 +230,37 @@ class Sidebar extends Component {
                       Projects
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    {" "}
+                    <Link
+                      className={
+                        this.isPathActive("/cms/carrier")
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/cms/carrier"
+                    >
+                      Carriers
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    {" "}
+                    <Link
+                      className={
+                        this.isPathActive("/cms/contact")
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/cms/contact"
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </Collapse>
           </li>
-          <li
+          {/* <li
             className={
               this.isPathActive("/form-elements")
                 ? "nav-item menu-items active"
@@ -275,8 +301,8 @@ class Sidebar extends Component {
                 </ul>
               </div>
             </Collapse>
-          </li>
-          <li
+          </li> */}
+          {/* <li
             className={
               this.isPathActive("/tables")
                 ? "nav-item menu-items active"
@@ -317,7 +343,7 @@ class Sidebar extends Component {
                 </ul>
               </div>
             </Collapse>
-          </li>
+          </li> */}
           {/* <li
             className={
               this.isPathActive("/charts")

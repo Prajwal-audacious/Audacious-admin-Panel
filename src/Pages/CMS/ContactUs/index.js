@@ -1,12 +1,10 @@
 import React, { useState } from "react";
+import CustomForm from "../../../Components/CustomForm";
 import Card from "../../../Components/Card";
 import Banner from "./Banner";
-import ProjectDetails from "./ProjectDetails";
-import OurProjects from "./OurProjects";
-import CustomForm from "../../../Components/CustomForm";
-import FormInput from "../../../Components/FormInput";
+import Founders from "./Founders";
 
-const Projects = () => {
+const ContactUs = () => {
   const [inputData, setInputData] = useState({});
   const [ckeditorData, setCkeditorData] = useState({});
   const [imageData, setImageData] = useState({});
@@ -21,39 +19,29 @@ const Projects = () => {
   const handleCkeditorValues = (event, editor, name) => {
     setCkeditorData({ ...ckeditorData, [name]: editor.getData() });
   };
-  console.log(inputData);
   console.log(ckeditorData);
+  console.log(inputData);
   console.log(imageData);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("submited");
+  const submitBtn = () => {
+    console.log("djkawn");
   };
-
   return (
-    <CustomForm onSubmit={handleSubmit}>
+    <CustomForm onSubmit={submitBtn}>
       <div className="row">
         <Card>
           <Banner handleImage={handleImage} handleChange={handleChange} />
         </Card>
         <Card>
-          <ProjectDetails
+          <Founders
             handleCkeditorValues={handleCkeditorValues}
             handleImage={handleImage}
             handleChange={handleChange}
           />
-        </Card>
-        <Card>
-          <OurProjects
-            handleCkeditorValues={handleCkeditorValues}
-            handleImage={handleImage}
-            handleChange={handleChange}
-          />
-          <FormInput type="button" />
         </Card>
       </div>
     </CustomForm>
   );
 };
 
-export default Projects;
+export default ContactUs;

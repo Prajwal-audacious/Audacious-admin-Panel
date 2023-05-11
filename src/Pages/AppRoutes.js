@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-
 import Spinner from "../Pages/shared/Spinner";
 
 const Dashboard = lazy(() => import("./dashboard/Dashboard"));
@@ -9,6 +8,8 @@ const Home = lazy(() => import("./CMS/Home/index"));
 const About = lazy(() => import("./CMS/About/index"));
 const Services = lazy(() => import("./CMS/Services/index"));
 const Projects = lazy(() => import("./CMS/Projects/index"));
+const Carrier = lazy(() => import("./CMS/Carrier/index"));
+const ContactUS = lazy(() => import("./CMS/ContactUs/index"));
 // form element
 const BasicElements = lazy(() => import("./form-elements/BasicElements"));
 // table
@@ -30,6 +31,8 @@ const AppRoutes = () => {
         <Route path="/cms/about" component={About} />
         <Route path="/cms/services" component={Services} />
         <Route path="/cms/projects" component={Projects} />
+        <Route path="/cms/carrier" component={Carrier} />
+        <Route path="/cms/contact" component={ContactUS} />
 
         <Route path="/form-Elements/basic-elements" component={BasicElements} />
 
