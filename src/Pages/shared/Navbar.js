@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import adminImg from "../../assets/images/businessman-character-avatar-isolated/60111.jpg";
 
 class Navbar extends Component {
   toggleOffcanvas() {
@@ -29,19 +29,9 @@ class Navbar extends Component {
           >
             <span className="mdi mdi-menu"></span>
           </button>
-          <ul className="navbar-nav w-100">
-            <li className="nav-item w-100">
-              <form className="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search products"
-                />
-              </form>
-            </li>
-          </ul>
+
           <ul className="navbar-nav navbar-nav-right">
-            <Dropdown alignRight as="li" className="nav-item d-none d-lg-block">
+            {/* <Dropdown alignRight as="li" className="nav-item d-none d-lg-block">
               <Dropdown.Toggle className="nav-link btn btn-success create-new-button no-caret">
                 +  Create New Project 
               </Dropdown.Toggle>
@@ -115,8 +105,8 @@ class Navbar extends Component {
               >
                 <i className="mdi mdi-view-grid"></i>
               </a>
-            </li>
-            <Dropdown alignRight as="li" className="nav-item border-left">
+            </li> */}
+            {/* <Dropdown alignRight as="li" className="nav-item border-left">
               <Dropdown.Toggle
                 as="a"
                 className="nav-link count-indicator cursor-pointer"
@@ -208,8 +198,8 @@ class Navbar extends Component {
                   4  new messages 
                 </p>
               </Dropdown.Menu>
-            </Dropdown>
-            <Dropdown alignRight as="li" className="nav-item border-left">
+            </Dropdown> */}
+            {/* <Dropdown alignRight as="li" className="nav-item border-left">
               <Dropdown.Toggle
                 as="a"
                 className="nav-link count-indicator cursor-pointer"
@@ -285,7 +275,7 @@ class Navbar extends Component {
                    See all notifications 
                 </p>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
             <Dropdown alignRight as="li" className="nav-item">
               <Dropdown.Toggle
                 as="a"
@@ -294,20 +284,18 @@ class Navbar extends Component {
                 <div className="navbar-profile">
                   <img
                     className="img-xs rounded-circle"
-                    src={require("../../assets/images/faces/face15.jpg")}
+                    src={adminImg}
                     alt="profile"
                   />
                   <p className="mb-0 d-none d-sm-block navbar-profile-name">
-                     Henry Klein 
+                    Admin Details
                   </p>
                   <i className="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
               </Dropdown.Toggle>
 
               <Dropdown.Menu className="navbar-dropdown preview-list navbar-profile-dropdown-menu">
-                <h6 className="p-3 mb-0">
-                   Profile 
-                </h6>
+                <h6 className="p-3 mb-0">Profile</h6>
                 <Dropdown.Divider />
                 <Dropdown.Item
                   href="!#"
@@ -320,15 +308,17 @@ class Navbar extends Component {
                     </div>
                   </div>
                   <div className="preview-item-content">
-                    <p className="preview-subject mb-1">
-                       Settings 
-                    </p>
+                    <li className="preview-subject mb-1">
+                      <Link className="ancorLink" to="/admin-info">
+                        Admin Info
+                      </Link>
+                    </li>
                   </div>
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item
-                  href="!#"
-                  onClick={(evt) => evt.preventDefault()}
+                  href="https://techiegent.com/"
+                  // onClick={(evt) => evt.preventDefault()}
                   className="preview-item"
                 >
                   <div className="preview-thumbnail">
@@ -337,15 +327,21 @@ class Navbar extends Component {
                     </div>
                   </div>
                   <div className="preview-item-content">
-                    <p className="preview-subject mb-1">
-                       Log Out 
-                    </p>
+                    <li className="preview-subject mb-1">
+                      <a
+                        className="ancorLink"
+                        href="https://techiegent.com/"
+                        target="_blank"
+                      >
+                        techiegent.com{" "}
+                      </a>
+                    </li>
                   </div>
                 </Dropdown.Item>
-                <Dropdown.Divider />
+                {/* <Dropdown.Divider />
                 <p className="p-3 mb-0 text-center">
                    Advanced settings 
-                </p>
+                </p> */}
               </Dropdown.Menu>
             </Dropdown>
           </ul>

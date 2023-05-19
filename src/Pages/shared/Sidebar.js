@@ -33,12 +33,12 @@ class Sidebar extends Component {
     });
 
     const dropdownPaths = [
-      { path: "/apps", state: "appsMe   nuOpen" },
+      { path: "/apps", state: "appsMenuOpen" },
       { path: "/cms", state: "basicUiMenuOpen" },
-      // { path: "/form-elements", state: "formElementsMenuOpen" },
-      // { path: "/tables", state: "tablesMenuOpen" },
-      { path: "/user-pages", state: "userPagesMenuOpen" },
-      { path: "/error-pages", state: "errorPagesMenuOpen" },
+      // { path: "/form-elements", state: "formElementsMenuOpen" },m sta
+      { path: "/tables", state: "tablesMenuOpen" },
+      // { path: "/user-pages", state: "userPagesMenuOpen" },
+      // { path: "/error-pages", state: "errorPagesMenuOpen" },
     ];
 
     dropdownPaths.forEach((obj) => {
@@ -61,7 +61,7 @@ class Sidebar extends Component {
           </a>
         </div>
         <ul className="nav">
-          <li className="nav-item profile">
+          {/* <li className="nav-item profile">
             <div className="profile-desc">
               <div className="profile-pic">
                 <div className="count-indicator">
@@ -135,7 +135,7 @@ class Sidebar extends Component {
                 </Dropdown.Menu>
               </Dropdown>
             </div>
-          </li>
+          </li> */}
           <li className="nav-item nav-category">
             <span className="nav-link">Navigation</span>
           </li>
@@ -254,6 +254,19 @@ class Sidebar extends Component {
                       to="/cms/contact"
                     >
                       Contact Us
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    {" "}
+                    <Link
+                      className={
+                        this.isPathActive("/cms/layout")
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                      to="/cms/layout"
+                    >
+                      Layout
                     </Link>
                   </li>
                 </ul>
@@ -428,43 +441,43 @@ class Sidebar extends Component {
           </li> */}
           <li
             className={
-              this.isPathActive("/user-pages")
+              this.isPathActive("/tables")
                 ? "nav-item menu-items active"
                 : "nav-item menu-items"
             }
           >
             <div
               className={
-                this.state.userPagesMenuOpen
+                this.state.tablesMenuOpen
                   ? "nav-link menu-expanded"
                   : "nav-link"
               }
-              onClick={() => this.toggleMenuState("userPagesMenuOpen")}
+              onClick={() => this.toggleMenuState("tablesMenuOpen")}
               data-toggle="collapse"
             >
               <span className="menu-icon">
                 <i className="mdi mdi-security"></i>
               </span>
-              <span className="menu-title">User Pages</span>
+              <span className="menu-title">Contact Us Data</span>
               <i className="menu-arrow"></i>
             </div>
-            <Collapse in={this.state.userPagesMenuOpen}>
+            <Collapse in={this.state.tablesMenuOpen}>
               <div>
                 <ul className="nav flex-column sub-menu">
                   <li className="nav-item">
                     {" "}
                     <Link
                       className={
-                        this.isPathActive("/user-pages/login-1")
+                        this.isPathActive("/tables/contact-us-table")
                           ? "nav-link active"
                           : "nav-link"
                       }
-                      to="/user-pages/login-1"
+                      to="/tables/contact-us-table"
                     >
-                      Login
+                      Table
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     {" "}
                     <Link
                       className={
@@ -476,12 +489,12 @@ class Sidebar extends Component {
                     >
                       Register
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </Collapse>
           </li>
-          <li className="nav-item nav-category">
+          {/* <li className="nav-item nav-category">
             <span className="nav-link">More</span>
           </li>
           <li
@@ -538,7 +551,7 @@ class Sidebar extends Component {
                 </ul>
               </div>
             </Collapse>
-          </li>
+          </li> */}
           {/* <li className="nav-item menu-items">
             <a
               className="nav-link"

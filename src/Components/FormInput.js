@@ -58,6 +58,7 @@ const FormInput = ({ type, label, name, onChange, data }) => {
                 className="form-control visibility-hidden"
                 id={name}
                 name={name}
+                multiple
                 onChange={onChange}
               />
               <label className="custom-file-label" htmlFor={name}>

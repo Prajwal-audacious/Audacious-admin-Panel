@@ -40,7 +40,7 @@ const Login = () => {
                     SIGN IN
                   </Link>
                 </div>
-                <div className="my-2 d-flex justify-content-between align-items-center">
+                {/* <div className="my-2 d-flex justify-content-between align-items-center">
                   <div className="form-check">
                     <label className="form-check-label text-muted">
                       <input type="checkbox" className="form-check-input" />
@@ -55,8 +55,8 @@ const Login = () => {
                   >
                     Forgot password?
                   </a>
-                </div>
-                <div className="mb-2">
+                </div> */}
+                {/* <div className="mb-2">
                   <button
                     type="button"
                     className="btn btn-block btn-facebook auth-form-btn"
@@ -64,13 +64,13 @@ const Login = () => {
                     <i className="mdi mdi-facebook mr-2"></i>Connect using
                     facebook
                   </button>
-                </div>
-                <div className="text-center mt-4 font-weight-light">
+                </div> */}
+                {/* <div className="text-center mt-4 font-weight-light">
                   Don't have an account?{" "}
                   <Link to="/user-pages/register" className="text-primary">
                     Create
                   </Link>
-                </div>
+                </div> */}
               </Form>
             </div>
           </div>
